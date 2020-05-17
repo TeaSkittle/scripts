@@ -7,7 +7,7 @@ import socket
 s = socket.socket( socket.AF_INET, socket.SOCK_STREAM )
 target = sys.argv[ 1 ]
 
-# Dictionary of well known ports
+# Most common ports
 def ports( number ):
 	if number == 20:
 		return 'ftp - Data'
