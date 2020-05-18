@@ -5,7 +5,8 @@ import sys
 import socket
 
 s = socket.socket( socket.AF_INET, socket.SOCK_STREAM )
-target = sys.argv[ 1 ]
+s.settimeout( 5 )
+target = sys.argv[ 1 ]	
 
 # Most common ports
 def ports( number ):
@@ -42,27 +43,33 @@ def ports( number ):
 
 
 # Port scanner
-def scan( port ):
-    try:
-        con = s.connect(( target, port ))
-        return True
-    except:
-        return False
+def scan( port ): 
+	try:
+		s.connect(( target, port ))
+		s.close()
+		return True
+	except:
+		pass
+		return False
 
 # DNS lookup
 def look( server ):
 	try:
 		server_ip = socket.gethostbyname( server )
 		print( server_ip )
+		return True
 	except:
 		print( "ERROR: Can't find hostname" )
+		return False
 
 def main():	
 	print( "Scanning ", target, "..." )
 	look( target )
 	print( "" )
 	print( "Open ports: " )
-	for x in range( 63535 ):
+	# total number of ports: 63535
+	# total takes forever and is not super usefull
+	for x in range( 1024 ):
 		if scan( x ):
 			print( ports( x ), " - ", x )
 
