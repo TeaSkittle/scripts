@@ -25,6 +25,10 @@ drwxr-xr-x 2 OWNER GROUP date/time file
 $ find directory_name -group group_name -user user_name
 $ find / -group wheel -user -TeaSkittle
 ```
+* Find MIME encoding format of a file:
+```bash
+$ file -i file_name
+```
 * To decode a Base64 encoded file:
 ```bash
 $ base64 -d file_name
