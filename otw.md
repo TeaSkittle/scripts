@@ -7,7 +7,7 @@ ssh -p 2220 banditN@bandit.labs.overthewire.org
 ```
 
 ## Flags
-9 - UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
+11 - IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
 
 ## Notes
 * To read a file starting with a -
@@ -25,4 +25,7 @@ drwxr-xr-x 2 OWNER GROUP date/time file
 $ find directory_name -group group_name -user user_name
 $ find / -group wheel -user -TeaSkittle
 ```
-
+* To decode a Base64 encoded file:
+```bash
+$ base64 -d file_name
+```
