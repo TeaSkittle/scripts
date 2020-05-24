@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Author: Travis Dowd
+# (c) Travis Dowd
 # Date: 5-9-2020
 # Convert decimal, hex, and binary numbers
 

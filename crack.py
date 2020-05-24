@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 # (c) Travis Dowd
-# Date started: 5-20-2020
-#
+# Date: 5-20-2020
 # Simple password cracker
 #
 # TODO: * Add a progress bar, percentage, or time left
