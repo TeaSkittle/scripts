@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+# (c) Travis Dowd
 # Simple port scanner
 
 import sys
