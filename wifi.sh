@@ -30,7 +30,7 @@ ip_show() {
     ip -o addr | awk '{split($4, a); print $2" : "a[1]}' | grep -v '::'
 }
 
-echo "Available Devices"
+echo "Available Devices: "
 ip link
 echo "Enter wifi interface: "
 read wifi
@@ -45,4 +45,3 @@ set_up
 init
 echo "[+]IPv4 Status:"
 ip_show
-
