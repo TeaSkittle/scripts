@@ -6,15 +6,15 @@
 # Add network to wpa_supplicant config
 set_up() {
     echo "[+]Setting up WiFi..."
-    if [ ! -f /etc/wpa_supplicant/wpa_supplicant-$wifi.conf ]; then
-	echo "ctrl_interface=/run/wpa_supplicant" > /etc/wpa_supplicant/wpa_supplicant-$wifi.conf
-	echo "update_config=1" >> /etc/wpa_supplicant/wpa_supplicant-$wifi.conf
-	wpa_passphrase $ssid $pass >> /etc/wpa_supplicant/wpa_supplicant-$wifi.conf
+    if [ ! -f "/etc/wpa_supplicant/wpa_supplicant-$wifi.conf" ]; then
+	echo "ctrl_interface=/run/wpa_supplicant" > "/etc/wpa_supplicant/wpa_supplicant-$wifi.conf"
+	echo "update_config=1" >> "/etc/wpa_supplicant/wpa_supplicant-$wifi.conf"
+	wpa_passphrase "$ssid" "$pass" >> "/etc/wpa_supplicant/wpa_supplicant-$wifi.conf"
     else
-	if [ grep -q $ssid /etc/wpa_supplicant/wpa_supplicant-$wifi.conf ]; then
+	if grep -q "$ssid" "/etc/wpa_supplicant/wpa_supplicant-$wifi.conf"; then
 	    echo "[-]SSID already configured..."
 	else
-            wpa_passphrase $ssid $pass >> /etc/wpa_supplicant/wpa_supplicant-$wifi.conf
+            wpa_passphrase "$ssid" "$pass" >> "/etc/wpa_supplicant/wpa_supplicant-$wifi.conf"
 	fi
     fi
 }
@@ -22,7 +22,7 @@ set_up() {
 # Initialize connection
 init() {
     echo "[+]Initializing connection..."
-    wpa_supplicant -B -i $wifi -c /etc/wpa_supplicant/wpa_supplicant-$wifi.conf
+    wpa_supplicant -B -i "$wifi" -c "/etc/wpa_supplicant/wpa_supplicant-$wifi.conf"
 }
 
 # View ipv4 of interfaces
@@ -33,13 +33,13 @@ ip_show() {
 echo "Available Devices: "
 ip link
 echo "Enter wifi interface: "
-read wifi
+read -r wifi
 echo "SSID: "
-read ssid
+read -r ssid
 echo "Password: "
-read pass
+read -r pass
 echo "[+]Enabling Device..."
-ip link set $wifi up
+ip link set "$wifi" up
 # Connect and set up
 set_up
 init
