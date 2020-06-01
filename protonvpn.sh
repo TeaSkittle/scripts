@@ -7,7 +7,7 @@ sudo apt install -y openvpn dialog python3-pip python3-setuptools
 sudo pip3 install protonvpn-cli
 echo "Use OpenVPN account settings, not ProtonVPN."
 echo "Log into protonvpn.com to find OpenVPN account and password"
-echo "[+] Opening protonvpn login in browser..."
+echo "[+] Opening https://account.protonvpn.com/ in browser..."
 xdg-open https://account.protonvpn.com/ || echo "[!] Error: Can't open URL"
 read -r "Press [Enter] to resume ..."
 sudo protonvpn init
