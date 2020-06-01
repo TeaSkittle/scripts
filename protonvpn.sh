@@ -14,4 +14,4 @@ echo "[+] Connecting to fastest VPN server..."
 protonvpn c -f
 echo "Connection status:"
 protonvpn status
-echo "use protonvpn --help to see options"
+echo "To see options use: protonvpn --help"
