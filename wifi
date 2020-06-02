@@ -1,6 +1,7 @@
 #!/usr/bin/sh
 # (c) Travis Dowd
-# Date: 5-24-2020
+# (d) 5-24-2020
+#
 # Setup wifi for wpa_supplicant
 
 # Add network to wpa_supplicant config
