@@ -22,7 +22,3 @@ while( my $line = <$fh> ) {
 }
 # remove TEMP_FILE
 unlink "TEMP_FILE"
-
-
-
-
