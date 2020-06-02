@@ -1,9 +1,8 @@
 #!/usr/bin/sh
-# shellcheck disable=SC2012
-#
 # (c) Travis Dowd
+# (d) 6-1-2020
 # 
-# Install and configure proton VPN (debian-based)
+# Install and configure protonVPN ( for debian-based systems, tested on Pop!_OS )
 #
 
 set_up() {
@@ -12,6 +11,7 @@ set_up() {
 	printf "\n\nIMPORTANT: Use OpenVPN account settings, not ProtonVPN! Can be found on protonvpn.com\n"
 	echo "[+] Opening https://account.protonvpn.com/ in browser..."
 	# This is to avoid running xd-open as root ( can cause issues )
+	# shellcheck disable=SC2012
 	new_user=$(ls -l /run/user/1000/gdm/Xauthority | awk '{print $3}')
 	sudo -u "$new_user" xdg-open https://account.protonvpn.com/ || echo "[!] Error: Can't open URL"
 	printf "\nPress enter to continue..."
