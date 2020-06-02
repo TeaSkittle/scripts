@@ -9,7 +9,7 @@ set_up() {
 	pip3 install protonvpn-cli
 	printf "\n\nIMPORTANT: Use OpenVPN account settings, not ProtonVPN! Can be found on protonvpn.com\n"
 	echo "[+] Opening https://account.protonvpn.com/ in browser..."
-	# This is to avoid running xd-open as root ( can cause issues )
+	# $new_user is to avoid running xdg-open as root ( can cause issues )
 	# shellcheck disable=SC2012
 	new_user=$(ls -l /run/user/1000/gdm/Xauthority | awk '{print $3}')
 	sudo -u "$new_user" xdg-open https://account.protonvpn.com/ || echo "[!] Error: Can't open URL"
