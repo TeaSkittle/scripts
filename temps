@@ -3,12 +3,14 @@
 # (d) 6-1-2020
 #
 # Show system temps, x86_pkg_temp is cpu
-#
+
 use strict;
 use warnings;
-# Make nicer formatting
+
+# Make output look nice
 print "\nType\t\tFahrenheit\n";
 print "--------------------------\n";
+
 # make new file with machine temps 
 system( "cat /sys/class/thermal/thermal_zone*/temp > TEMP_FILE" );
 open( my $fh, "<", "TEMP_FILE") or die $!;
