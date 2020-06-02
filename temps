@@ -2,7 +2,7 @@
 # (c) Travis Dowd
 # (d) 6-1-2020
 #
-# Show machine temps, x86_pkg_temp is cpu
+# Show system temps, x86_pkg_temp is cpu
 #
 use strict;
 use warnings;
