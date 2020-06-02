@@ -6,6 +6,9 @@
 #
 use strict;
 use warnings;
+# Make nicer formatting
+print "\nType\t\tFahrenheit\n";
+print "--------------------------\n";
 # make new file with machine temps 
 system( "cat /sys/class/thermal/thermal_zone*/temp > TEMP_FILE" );
 open( my $fh, "<", "TEMP_FILE") or die $!;
@@ -20,5 +23,7 @@ while( my $line = <$fh> ) {
     print ":\t", $temp, "\n";    
     $var++;
 }
+print "--------------------------\n\n";
 # remove TEMP_FILE
 unlink "TEMP_FILE"
+
