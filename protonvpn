@@ -27,7 +27,7 @@ is_root() {
 	if [ "$HOME" = "/root" ]; then
 		set_up
 	else
-		echo "[-] Error: xdg-open need home to be /root"
+		echo "[-] Error: xdg-open needs home set as /root"
 		exit 1;
 	fi
 }
