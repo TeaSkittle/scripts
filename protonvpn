@@ -3,7 +3,6 @@
 # (d) 6-1-2020
 # 
 # Install and configure protonVPN ( for debian-based systems, tested on Pop!_OS )
-#
 
 set_up() {
 	apt install -y openvpn dialog python3-pip python3-setuptools
