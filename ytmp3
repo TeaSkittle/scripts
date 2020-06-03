@@ -1,0 +1,48 @@
+#!/usr/bin/perl
+# (c) Travis Dowd
+# (d) 6-2-2020
+#
+# download and play mp3 from youtube video
+#
+# usage: ./ytmp3 "url" output_file
+
+use strict;
+use warnings;
+
+my $run = 1;
+
+sub check() {
+    my @apps = ("/usr/local/bin/youtube-dl","/usr/bin/ffmpeg","/usr/bin/mpg123");
+    foreach my $app(@apps) {
+        if (! -e "$app" ) {
+            if ( $app eq "/usr/local/bin/youtube-dl" ) { print "[!] Error: youtube-dl not installed\n"; $run=0; msg(); }         
+            if ( $app eq "/usr/bin/ffmpeg"           ) { print "[!] Error: ffmpeg not installed\n"; $run=0; msg(); }        
+            if ( $app eq "/usr/bin/mpg123"           ) { print "[!] Error: mpg123 not installed\n"; $run=0; msg(); }                                        
+        }
+    }
+}
+
+sub msg() {
+    print "\n[-] Install neccessary packages? [Y/n] \n";
+    chomp ($_=<STDIN>);    
+    if ( /^[yn]/i ) {
+        if ( /^n/i ) { exit; } 
+        if (/^y/i) {
+            print "[+] Installing packages...";
+            system "sudo apt-get install -y youtube-dl mpg123 ffmpeg";
+            system "sudo pip3 install -U youtube-dl";
+            $run = 1;
+        }
+    }
+
+}
+
+sub play() { 
+    system "youtube-dl -i --extract-audio --audio-format mp3 --audio-quality 0 $ARGV[0] -o $ARGV[1].mp4";
+    print "\n[+] Download and conversion complete\n[+] Playing audio file...\n\n";
+    system "mpg123 $ARGV[1].mp3";
+}
+
+check();
+if ( $run == 1 ) { play(); }
+else { exit; }
