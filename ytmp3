@@ -2,7 +2,7 @@
 # (c) Travis Dowd
 # (d) 6-2-2020
 #
-# download and play mp3 from youtube video
+# Donwload mp3 data from YouTube video and play in terminal
 #
 # usage: ./ytmp3 "url" output_file
 
