@@ -9,3 +9,4 @@ This is just a place holder for random scipts & tools of mine that don't need a 
 * `wifi` - Setup wifi for wpa_supplicant
 * `temp` - View system temps
 * `ytmp3` - Donwload mp3 data from YouTube video and play in terminal
+* `rpt` - Open TP-Link repeater config page

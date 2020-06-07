@@ -1,0 +1,15 @@
+#!/usr/bin/perl
+# (c) Travis Dowd
+# (d) 6-7-2020
+#
+# Open tplink wifi repeater config site in surf ( doesn't work in firefox )
+
+use strict;
+use warnings;
+
+if ( ! -e "/usr/bin/surf" ) {
+    print "[-] Need to have surf installed\n";
+    exit 0;
+} else {
+    system "surf http://tplinkrepeater.net/ &";
+}
