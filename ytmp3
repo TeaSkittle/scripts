@@ -2,7 +2,7 @@
 # (c) Travis Dowd
 # (d) 6-2-2020
 #
-# download and play mp3 from youtube video
+# Donwload mp3 data from YouTube video and play in terminal
 #
 # usage: ./ytmp3 "url" output_file
 
@@ -12,9 +12,9 @@ use warnings;
 my $run = 1;
 
 sub check() {
-    my @apps = ("/usr/local/bin/youtube-dl","/usr/bin/ffmpeg","/usr/bin/mpg123");
-    foreach my $app(@apps) {
-        if (! -e "$app" ) {
+    my @apps = ( "/usr/local/bin/youtube-dl","/usr/bin/ffmpeg","/usr/bin/mpg123" );
+    foreach my $app( @apps ) {
+        if ( ! -e "$app" ) {
             if ( $app eq "/usr/local/bin/youtube-dl" ) { print "[!] Error: youtube-dl not installed\n"; $run=0; msg(); }         
             if ( $app eq "/usr/bin/ffmpeg"           ) { print "[!] Error: ffmpeg not installed\n"; $run=0; msg(); }        
             if ( $app eq "/usr/bin/mpg123"           ) { print "[!] Error: mpg123 not installed\n"; $run=0; msg(); }                                        
@@ -24,10 +24,10 @@ sub check() {
 
 sub msg() {
     print "\n[-] Install neccessary packages? [Y/n] \n";
-    chomp ($_=<STDIN>);    
+    chomp ( $_=<STDIN> );    
     if ( /^[yn]/i ) {
         if ( /^n/i ) { exit; } 
-        if (/^y/i) {
+        if ( /^y/i ) {
             print "[+] Installing packages...";
             system "sudo apt-get install -y youtube-dl mpg123 ffmpeg";
             system "sudo pip3 install -U youtube-dl";
