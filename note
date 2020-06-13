@@ -1,0 +1,55 @@
+#!/usr/bin/perl
+# (c) Travis Dowd
+# (d) 6-13-2020
+#
+# Note taking script
+
+use strict;
+use warnings;
+
+# Variables th be easily changed if needed
+my $notes = "/home/tea/Dropbox/notes.md";
+my $editor = "jed";
+# Time and date
+my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst) = localtime( time );
+my $real_year = $year + 1900;
+my $date = "$mon-$mday-$real_year";
+
+# Get Dropbox up and running
+sub check() {
+    if ( ! -e "/usr/bin/dropbox" ) {
+	print "[!]Error: need to install Dropbox";
+	return 0;
+    } else { return 1; }
+}
+
+# Add note with -a
+sub todo() {
+    open ( my $fh, '>>', $notes ) or die $!;
+    print $fh "-[ ] ( $date ) ";
+    my $input = <STDIN>;
+    chomp $input;
+    print $fh "$input \n";
+}
+
+# Sort through cmd line args
+sub options() {
+    if ( scalar @ARGV > 0 ) {
+	if ( $ARGV[0] eq "-a" ) {
+	    todo();
+	}
+    } else {  
+	system "$editor $notes";
+    }
+}
+
+# Main not a needed sub routine, I just like it
+sub main() {
+    if ( check() == 1 ) {
+	options();
+    } else {
+	exit;
+    }
+}
+
+main();
