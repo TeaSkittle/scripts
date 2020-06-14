@@ -6,9 +6,11 @@
 
 use strict;
 use warnings;
+use File::Copy;
 
-# Variables th be easily changed if needed
+# Variables to be easily changed if needed
 my $notes = "/home/tea/Dropbox/notes.md";
+my $back = "/home/tea/Documents/notes_backup";
 my $editor = "jed";
 # Time and date
 my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst) = localtime( time );
@@ -26,10 +28,15 @@ sub check() {
 # Add note with -a
 sub todo() {
     open ( my $fh, '>>', $notes ) or die $!;
-    print $fh "-[ ] ( $date ) ";
+    print $fh "-[] ( $date ) ";
     my $input = <STDIN>;
     chomp $input;
-    print $fh "$input \n";
+    print $fh "$input  \n";
+}
+
+# Backup notes automatically
+sub backup() {
+    copy( "$notes", "$back" ) or die $!;
 }
 
 # Sort through cmd line args
@@ -53,3 +60,4 @@ sub main() {
 }
 
 main();
+backup();
