@@ -12,6 +12,8 @@ use File::Copy;
 my $notes = "/home/tea/Dropbox/notes.md";
 my $back = "/home/tea/Documents/notes_backup";
 my $editor = "jed";
+# Command to install dropbox
+my $install = "sudo curl -LO 'https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2020.03.04_amd64.deb' && sudo dpkg -i dropbox_* && dropbox update && dropbox start";
 # Time and date
 my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst) = localtime( time );
 my $real_year = $year + 1900;
@@ -21,7 +23,9 @@ my $date = "$real_month-$mday-$real_year";
 # Get Dropbox up and running
 sub check() {
     if ( ! -e "/usr/bin/dropbox" ) {
-	print "[!]Error: need to install Dropbox";
+	print "[!] Error: need to install Dropbox\n";
+	print "[-] To install Dropbox and start daemon, run this command:\n\n";
+	print "$install\n\n";
 	return 0;
     } else { return 1; }
 }
