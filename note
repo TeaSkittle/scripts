@@ -15,7 +15,8 @@ my $editor = "jed";
 # Time and date
 my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst) = localtime( time );
 my $real_year = $year + 1900;
-my $date = "$mon-$mday-$real_year";
+my $real_month = $mon + 1;
+my $date = "$real_month-$mday-$real_year";
 
 # Get Dropbox up and running
 sub check() {
@@ -28,10 +29,9 @@ sub check() {
 # Add note with -a
 sub todo() {
     open ( my $fh, '>>', $notes ) or die $!;
-    print $fh "-[] ( $date ) ";
     my $input = <STDIN>;
     chomp $input;
-    print $fh "$input  \n";
+    print $fh "-[] ( $date ) $input  \n";
 }
 
 # Backup notes automatically
