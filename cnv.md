@@ -4,10 +4,10 @@
 This tool is designed to convert whole number values between the three main
 bases for programmers: decimal, hexadecimal, and binary. This tool was not
 used for doing calcultions with these values, it is just meant to convert
-them. You can however pipe the output into another a prgogram or language, I
+them. You can however pipe the output into another a program or language, I
 prefer awk for this use. Example:
 ```bash
-$ ./cnv.py -hd 0xFF | awk '{print $1 + 2'}
+$ ./cnv -hd 0xFF | awk '{print $1 + 2'}
 $ 257
 ```
 
