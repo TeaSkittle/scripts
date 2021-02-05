@@ -1,0 +1,14 @@
+#!/usr/bin/perl
+# (c) Travis Dowd
+# (d) 2/5/2021
+# Generate random pass on UNIX systems
+use strict;
+use warnings;
+
+my $length = 17;
+my $password;
+my $pwd;
+my @characters = (('A'..'Z'), ('a'..'z'), ('!','@','%','^','#'), (0..9));
+my $size = $#characters + 1;
+for (1..$length) { $pwd .= $characters[int(rand($size))]; } 
+print "$pwd";
