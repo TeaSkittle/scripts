@@ -3,4 +3,4 @@
 # (d) 2-5-2021
 #
 # Get info on IP address
-curl ipinfo.io/$1
+curl ipinfo.io/"$1"
