@@ -15,3 +15,4 @@ This is just a place holder for random scipts & tools of mine that don't need a 
 * `pass` - Generate a random 17 character long password
 * `ipcat` - Print out all IP addresses on network
 * `ipinfo` - Get IP address info from ipinfo.io
+* `emailinfo` - Get email adress info from emailrep.io
