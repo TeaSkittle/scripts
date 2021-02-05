@@ -1,0 +1,6 @@
+#!/usr/bin/sh
+# (c) Travis Dowd
+# (d) 2-5-2021
+#
+# Get info on IP address
+curl ipinfo.io/$1

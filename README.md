@@ -14,3 +14,4 @@ This is just a place holder for random scipts & tools of mine that don't need a 
 * `hhk` - Set keybindings similar to a Happy Hacking Keybaord
 * `pass` - Generate a random 17 character long password
 * `ipcat` - Print out all IP addresses on network
+* `ipinfo` - Get IP addresses info from ipinfo.io
