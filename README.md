@@ -12,3 +12,5 @@ This is just a place holder for random scipts & tools of mine that don't need a 
 * `rpt` - Open TP-Link repeater config page
 * `note` - Note taking script
 * `hhk` - Set keybindings similar to a Happy Hacking Keybaord
+* 'pass' - Generate a random 17 character long password
+* 'ipcat' - Print out all IP addresses on network
