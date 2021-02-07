@@ -1,7 +1,9 @@
 Scripts
-=======
+===
 
-This is just a place holder for random scipts & tools of mine that don't need a full repo
+This is just a place holder for random scipts & tools of mine that don't need a full repo.
+
+---
 
 **scan** - A simplenetwork port scanner  
 **cnv** - Convert integers between decimal, hexadecimal, and binary  
