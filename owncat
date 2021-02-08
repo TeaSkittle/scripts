@@ -1,0 +1,23 @@
+#!/bin/sh
+# (c) Travis Dowd
+# (d) 2-7-2021
+#
+# Nicely print out file permision stuff
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;36m'
+NC='\033[0m'
+
+perms=$(ls -l $1 | awk '{print $1}' | sed 's/\.//')
+octal=$(stat -c "%a %n" $1 | awk '{print $1}')
+username=$(ls -l $1 | awk '{print $3}')
+groupname=$(ls -l $1 | awk '{print $4}')
+filename=$(ls -l $1 | awk '{print $9}')
+
+echo " "
+echo "File:  ${YELLOW}$filename ${NC}"
+echo "User:  ${GREEN}$username ${NC}"
+echo "Group: ${GREEN}$groupname ${NC}"
+echo "r/w/x: ${RED}$perms ${NC}"
+echo "Octal: ${RED}$octal ${NC}"
+echo " "
