@@ -12,6 +12,7 @@ cd scripts
 rm LICENSE *.*
 chmod +x *
 ```
+---
 
 **scan** - A simplenetwork port scanner  
 **cnv** - Convert integers between decimal, hexadecimal, and binary  
