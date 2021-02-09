@@ -5,6 +5,14 @@ This is just a place holder for random scipts & tools of mine that don't need a 
 
 ---
 
+To make all UNIX scripts executable:
+```Bash
+git clone https://github.com/TeaSkittle/scripts
+cd scripts
+rm LICENSE *.*
+chmod +x *
+```
+
 **scan** - A simplenetwork port scanner  
 **cnv** - Convert integers between decimal, hexadecimal, and binary  
 **crack** - Crack passwords using a dictionary attack  
