@@ -29,3 +29,4 @@ chmod +x *
 **ipinfo** - Get IP address info from ipinfo.io  
 **emailinfo** - Get email adress info from emailrep.io  
 **owncat** - Print out file permissions
+**unix2dos** - Convert newline to carriage return, and visa versa

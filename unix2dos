@@ -1,0 +1,21 @@
+#!/bin/sh
+# (c) Travis Dowd
+# (d) 2-10-2021
+#
+# Convert newline to carriage return, and visa versa
+
+TEMP=".temp~"
+toDos="$(perl -pe 's/\r\n|\n|\r/\r\n/g' $2 > $TEMP)"
+toUnix="$(perl -pe 's/\r\n|\n|\r/\n/g' $2 > $TEMP)"
+
+if [ "$1" = "-du" ]
+then
+	$toDos
+	cat $TEMP
+	rm $TEMP
+elif [ "$1" = "-ud" ]
+then
+	$toUnix
+	cat $TEMP
+	rm $TEMP
+fi
