@@ -28,5 +28,5 @@ chmod +x *
 **ipcat** - Print out all IP addresses on network  
 **ipinfo** - Get IP address info from ipinfo.io  
 **emailinfo** - Get email adress info from emailrep.io  
-**owncat** - Print out file permissions
+**owncat** - Print out file permissions  
 **unix2dos** - Convert newline to carriage return, and visa versa
