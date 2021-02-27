@@ -1,0 +1,3 @@
+#!/bin/sh
+# Restart audio, weird issue with audio not loading on in Ubuntu
+killall pulseaudio; rm -r ~/.config/pulse/*
