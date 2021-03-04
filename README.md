@@ -30,4 +30,5 @@ chmod +x *
 **emailinfo** - Get email adress info from emailrep.io  
 **owncat** - Print out file permissions  
 **unix2dos** - Convert newline to carriage return, and visa versa  
-**audio_fix** - Fix pulse audio error in Ubunto 20.04
+**audio_fix** - Fix pulse audio error in Ubunto 20.04  
+**xlist** - List files in directory that are executable
