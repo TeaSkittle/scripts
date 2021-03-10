@@ -8,6 +8,7 @@
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[0;36m'
+PURPLE='\033[0;35m'
 NC='\033[0m'
 
 # Check what OS uuer is running
@@ -36,6 +37,9 @@ echo " "
 echo "File:  ${YELLOW}$filename ${NC}"
 echo "User:  ${GREEN}$username ${NC}"
 echo "Group: ${GREEN}$groupname ${NC}"
-echo "r/w/x: ${RED}$perms ${NC}"
 echo "Octal: ${RED}$octal ${NC}"
+echo "r/w/x: ${RED}$perms ${NC}"
+echo "$perms" | grep -q 's' && echo "\t${PURPLE}[!]${NC} setuid flag is set"
+echo "$perms" | grep -l 'l' && echo "\t${PURPLE}[!]${NC} is a symbolic link"
+echo "$perms" | grep -l 't' && echo "\t${PURPLE}[!]${NC} has sticky bit permissions"
 echo " "
