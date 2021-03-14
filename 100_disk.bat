@@ -4,7 +4,7 @@
 ::
 :: Description: Fix Disk running at 100% usage in Windows 10
 ::  A hacky solution to permanetly fix:
-::   1. Place script at C:\100_sisk.bat
+::   1. Place script at C:\100_disk.bat
 ::   2. Create shorcut to script and force admin: https://www.cnet.com/how-to/always-run-a-program-in-administrator-mode-in-windows-10/
 ::   3. Place shortcut in shell:startup
 :: ==================================================================================
