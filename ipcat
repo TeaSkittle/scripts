@@ -1,7 +1,0 @@
-#!/usr/bin/sh
-# (c) Travis Dowd
-# (d) 2/5/20201
-#
-# List all IP addresses on network
-arp -a | sed 's/[()]//g' | awk '{print $2}'
-
