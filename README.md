@@ -14,7 +14,6 @@ sudo chmod +x ~/.scripts/*
 ---
 
 **scan** - A simplenetwork port scanner  
-**cnv** - Convert integers between decimal, hexadecimal, and binary  
 **crack** - Crack passwords using a dictionary attack  
 **protonvpn** - Download and setup ProtonVPN  
 **wifi** - Setup wifi for wpa_supplicant  
@@ -26,3 +25,4 @@ sudo chmod +x ~/.scripts/*
 **owncat** - Print out file permissions  
 **unix2dos** - Convert newline to carriage return, and visa versa  
 **audio_fix** - Fix pulse audio error in Ubunto 20.04  
+**pc** - Perl calculator that works with decimal, hexadecimal, and binary values
