@@ -1,0 +1,26 @@
+#!/usr/bin/env perl
+# perl calculator
+# by: Travis Dowd
+# started: 2021-04-05
+use strict;
+use warnings;
+
+if (($#ARGV + 1) == 0) { # Interactive
+    while (<>) {
+	my $a = eval($_);
+	printf("\t%d\t\t\t0x%x\t\t\t0b%b\n",$a,$a,$a);
+    }
+} elsif (($#ARGV + 1) > 0) { # Parse arguments
+    if ($ARGV[0] eq "-h" || $ARGV[0] eq "--help") {
+	printf("Usage: ./pc \"expression\" - to evaluate an expression\n");
+	printf("       ./pc - to run as an interactive calculator\n");
+    } else {
+	convert();
+    }
+} 
+
+sub convert {
+    my $string = join(" ",@ARGV);
+    my $a = eval($string);
+    printf("\t%d\t\t\t0x%x\t\t\t0b%b\n",$a,$a,$a);
+}
