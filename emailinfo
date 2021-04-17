@@ -1,4 +1,0 @@
-#!/usr/bin/sh
-#
-# Get info on email address
-curl emailrep.io/"$1"
