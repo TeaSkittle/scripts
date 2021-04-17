@@ -22,12 +22,7 @@ sudo chmod +x ~/.scripts/*
 **ytmp3** - Donwload mp3 data from YouTube video and play in terminal  
 **rpt** - Open TP-Link repeater config page  
 **note** - Note taking script  
-**hhk** - Set keybindings similar to a Happy Hacking Keyboard  
-**pass** - Generate a random 17 character long password  
-**ipcat** - Print out all IP addresses on network  
-**ipinfo** - Get IP address info from ipinfo.io  
-**emailinfo** - Get email adress info from emailrep.io  
+**pass** - Generate a random 17 character long password   
 **owncat** - Print out file permissions  
 **unix2dos** - Convert newline to carriage return, and visa versa  
 **audio_fix** - Fix pulse audio error in Ubunto 20.04  
-**xlist** - List files in directory that are executable
