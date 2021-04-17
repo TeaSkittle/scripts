@@ -1,6 +1,0 @@
-#!/usr/bin/sh
-# By: Travis Dowd
-# Date: 3-3-2021
-#
-# list files in directory that are executable
-ls -l | grep -Ei '^[rwx-]{9}x' | awk '{print $9}'
