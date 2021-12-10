@@ -1,11 +1,6 @@
 #!/bin/sh
 # shellcheck disable=SC2012
 # shellcheck disable=SC2028
-#
-# (c) Travis Dowd
-# (d) 2-8-2021
-#
-# Nicely print out file permision stuff
 
 # Color Codes
 RED='\033[0;31m'
@@ -13,7 +8,6 @@ GREEN='\033[0;32m'
 YELLOW='\033[0;36m'
 PURPLE='\033[0;35m'
 NC='\033[0m'
-
 
 if [ ! -z $1 ]; then
 	octal="$(stat -c "%a %n" "$1" | awk '{print $1}')"
