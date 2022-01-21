@@ -1,0 +1,8 @@
+#!/usr/bin/sh
+ip_addr=$(ip -brief addres | tail -n 3 | head -n 1 | awk '{print $2}' | cut -d '/' -f 1)
+echo "--------"
+echo "Protocol: HTTP"
+echo "IPv4: $ip_addr"
+echo "port: 8000"
+echo "--------"
+python3 -m http.server
