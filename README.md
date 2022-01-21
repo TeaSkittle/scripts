@@ -26,3 +26,4 @@ sudo chmod +x ~/.scripts/*
 **unix2dos** - Convert newline to carriage return, and visa versa  
 **audio_fix** - Fix pulse audio error in Ubunto 20.04  
 **pc** - Perl calculator that works with decimal, hexadecimal, and binary values
+**server** - Start a simple file server via python3
