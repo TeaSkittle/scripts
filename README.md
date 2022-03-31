@@ -13,6 +13,8 @@ sudo chmod +x ~/.scripts/*
 ```
 ---
 
+## *Nix
+
 **scan** - A simplenetwork port scanner  
 **crack** - Crack passwords using a dictionary attack  
 **protonvpn** - Download and setup ProtonVPN  
@@ -27,3 +29,8 @@ sudo chmod +x ~/.scripts/*
 **audio_fix** - Fix pulse audio error in Ubunto 20.04  
 **pc** - Perl calculator that works with decimal, hexadecimal, and binary values  
 **server** - Start a simple file server via python3
+
+## Windows
+
+**100_disk** - Fix Disk running at 100% usage in Windows 10 (STOPPED WORKING LAST TIME I TESTED)
+**secondary-nic-setup** - Automatically set up virtual adapters for secondary NICs (useful for setting up and testing routers)
