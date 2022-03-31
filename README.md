@@ -8,7 +8,7 @@ This is just a place holder for random scipts & tools of mine that don't need a 
 To make all UNIX scripts executable:
 ```Bash
 git clone https://github.com/TeaSkittle/scripts ~/.scripts/
-rm ~/.scripts/LICENSE ~/.scripts/*.*
+rm -rf ~/.scripts/LICENSE ~/.scripts/windows
 sudo chmod +x ~/.scripts/*
 ```
 ---
