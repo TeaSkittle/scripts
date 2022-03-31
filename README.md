@@ -1,19 +1,17 @@
 Scripts
-===
+=========
 
 This is just a place holder for random scipts & tools of mine that don't need a full repo.
 
----
+Linux
+=========
 
-To make all UNIX scripts executable:
+To make scripts executable:
 ```Bash
 git clone https://github.com/TeaSkittle/scripts ~/.scripts/
 rm -rf ~/.scripts/LICENSE ~/.scripts/windows
 sudo chmod +x ~/.scripts/*
 ```
----
-
-## *Nix
 
 **scan** - A simplenetwork port scanner  
 **crack** - Crack passwords using a dictionary attack  
@@ -30,7 +28,8 @@ sudo chmod +x ~/.scripts/*
 **pc** - Perl calculator that works with decimal, hexadecimal, and binary values  
 **server** - Start a simple file server via python3
 
-## Windows
+Windows
+=========
 
 **100_disk** - Fix disk running at 100% usage in Windows 10 (STOPPED WORKING LAST TIME I TESTED)  
 **secondary-nic-setup** - Set up virtual adapters for secondary NIC (useful for setting up and testing routers)  
