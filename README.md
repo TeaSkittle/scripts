@@ -32,5 +32,5 @@ sudo chmod +x ~/.scripts/*
 
 ## Windows
 
-**100_disk** - Fix Disk running at 100% usage in Windows 10 (STOPPED WORKING LAST TIME I TESTED)  
-**secondary-nic-setup** - Automatically set up virtual adapters for secondary NICs (useful for setting up and testing routers)  
+**100_disk** - Fix disk running at 100% usage in Windows 10 (STOPPED WORKING LAST TIME I TESTED)  
+**secondary-nic-setup** - Set up virtual adapters for secondary NIC (useful for setting up and testing routers)  
